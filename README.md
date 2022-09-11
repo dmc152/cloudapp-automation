@@ -25,12 +25,13 @@ Even tho it can be because of browser caching the style background of the avatar
 
 ```bash
 
- # Using these commands should be enough, project has a dummy account which I intend to keep alive for a couple of days.
+ # Using these commands should be enough, project has a dummy account 
+ # which I intend to keep alive for a couple of days.
  cd cloudapp-automation
  npm install
  npm run tests
  
-#To run in headless browser use BROWSER environment variable
+# To run in headless browser use BROWSER environment variable
 BROWSER=false npm run tests
 
 # Adding Credentials for cloudapp, (can also add them directly to src/config.js)
@@ -41,8 +42,11 @@ ACCOUNT_EMAIL=<cloudAppEmail> ACCOUNT_PW=<cloudAppPw> npm run tests
 
 
 ```bash
+# Installing Node dependencies is still required 
+# until we generate our own Docker image with dependencies in it.
+cd cloudapp-automation && npm install && cd ..
 
-docker run -v $(pwd)/cloudapp-automation:/tests -it testcafe/testcafe chromium /tests/src/tests/settings --screenshots /tests/scrc/screenshots
+docker run -v $(pwd)/cloudapp-automation:/tests -it testcafe/testcafe chromium /tests/src/tests/settings --screenshots /tests/src/screenshots
 
 ```
 
