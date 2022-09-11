@@ -1,0 +1,23 @@
+{
+  "name": "cloudappchallenge",
+  "version": "1.0.0",
+  "description": "Cloud App Test Automation Challenge",
+  "main": "index.js",
+  "scripts": {
+    "tests": "node src/runner.js"
+  },
+  "author": "Daniel MC",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-promise": "^6.0.1",
+    "eslint-plugin-testcafe-community": "^2.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "testcafe": "^2.0.0"
+  }
+}
